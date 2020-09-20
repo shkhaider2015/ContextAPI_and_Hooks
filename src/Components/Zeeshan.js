@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 
-function Zeeshan(props) {
+function Zeeshan() {
   
-  let [numberOfGlass, setNumberOfGlass] = useState(props.glass);
 
   return (
     <div>
-      <h3> I am zeeshan and i have {numberOfGlass} </h3>
+      <h3> I am zeeshan and i have  </h3>
     </div>
   );
 }
