@@ -1,8 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext} from 'react';
 import './App.css';
 import Sameer from './Components/sameer';
 import Shakeel from './Components/Shakeel';
-import {FirstGlassProvider, MyGlassContext, MyGlassContextTwo, SecondGlassProvider} from "./Context/GlassContext";
+import Suleman from './Components/Suleman';
+import {GlassOneCTX, MyGlassContext, MyGlassContextTwo, GlassTwoCTX} from "./Context/GlassContext";
 function App() {
  
   const fCTX = useContext(MyGlassContext);
@@ -13,14 +14,15 @@ function App() {
      <h1>First Context : {fCTX} </h1>
      <h1>Second Context : {sCTX} </h1>
 
-    <FirstGlassProvider>
+    <GlassOneCTX>
       <Sameer />
       <Suleman />
-    </FirstGlassProvider>
+    </GlassOneCTX>
+    
 
-    <SecondGlassProvider >
+    <GlassTwoCTX>
       <Shakeel />
-    </SecondGlassProvider>
+    </GlassTwoCTX>
 
     </div>
   );

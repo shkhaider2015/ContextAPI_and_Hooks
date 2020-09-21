@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Suleman from './Suleman'
 
 function Shabbir() {
   
   return (
     <div>
-      <h3> I am Shabbir and i have </h3>
+      <button>Update from Shabbir</button>
       <Suleman   />
     </div>
   );

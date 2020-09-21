@@ -5,7 +5,7 @@ function Suleman() {
   
   return (
     <div>
-      <h3> I am Suleman and i have  </h3>
+      <button>Update from Suleman</button>
       <Shahid   />
     </div>
   );

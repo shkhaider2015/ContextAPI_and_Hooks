@@ -17,11 +17,25 @@ function FirstGlassProvider()
 
 function SecondGlassProvider()
 {
-    return <MySecondGlassContext.Provider
+    return <MyGlassContextTwo.Provider
     value={10}
     >
-    </MySecondGlassContext.Provider>
+    </MyGlassContextTwo.Provider>
 }
 
 export {FirstGlassProvider};
 export {SecondGlassProvider};
+
+export const GlassOneCTX = ({children}) =>
+{
+    return <MyGlassContext.Provider value={0}>
+        {children}
+    </MyGlassContext.Provider>
+}
+
+const GlassTwoCTX = ({children}) => {
+    return <MyGlassContextTwo.Provider value={10}>
+        {children}
+    </MyGlassContextTwo.Provider>
+}
+export {GlassTwoCTX}

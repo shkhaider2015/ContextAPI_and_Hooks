@@ -5,8 +5,7 @@ function Shahid() {
   
   return (
     <div>
-      <h3> I am Shahid and i have </h3>
-      <Shakeel   />
+      <button>Update from Shahid</button>
     </div>
   );
 }
