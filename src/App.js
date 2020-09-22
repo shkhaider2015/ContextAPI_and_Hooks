@@ -1,5 +1,7 @@
 import React, { useState} from 'react';
 import './App.css';
+import RDShakeel from './Components/RDShakeel';
+import RDZeeshan from './Components/RDZeeshan';
 import Sameer from './Components/sameer';
 import Shakeel from './Components/Shakeel';
 import Suleman from './Components/Suleman';
@@ -27,6 +29,9 @@ function App() {
   <MyGlassContextTwo.Provider value={secondState}>
   <Shakeel />
   </MyGlassContextTwo.Provider>
+
+  <RDShakeel />
+  <RDZeeshan />
      
     
 
