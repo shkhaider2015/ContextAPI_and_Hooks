@@ -1,11 +1,19 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
+import { MyGlassContext } from '../Context/GlassContext';
 import Shakeel from './Shakeel'
 
 function Shahid() {
   
+  let ctx = useContext(MyGlassContext)
   return (
     <div>
-      <button>Update from Shahid</button>
+      <button
+      onClick={
+        ()=>{
+          ctx[1](++ctx[0])
+        }
+      }
+      >Update from Shahid</button>
     </div>
   );
 }

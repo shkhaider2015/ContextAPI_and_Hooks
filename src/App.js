@@ -1,28 +1,34 @@
-import React, { useContext} from 'react';
+import React, { useState} from 'react';
 import './App.css';
 import Sameer from './Components/sameer';
 import Shakeel from './Components/Shakeel';
 import Suleman from './Components/Suleman';
-import {GlassOneCTX, MyGlassContext, MyGlassContextTwo, GlassTwoCTX} from "./Context/GlassContext";
+import {MyGlassContext, MyGlassContextTwo} from "./Context/GlassContext";
 function App() {
  
-  const fCTX = useContext(MyGlassContext);
-  const sCTX = useContext(MyGlassContextTwo);
+  let firstState = useState(0)
+  let secondState = useState(10)
 
   return (
     <div className="App">
-     <h1>First Context : {fCTX} </h1>
-     <h1>Second Context : {sCTX} </h1>
-
-    <GlassOneCTX>
-      <Sameer />
+     <h1>First Context : {firstState[0]} </h1>
+     <h1>Second Context : {secondState[0]} </h1>
+    
+    <MyGlassContext.Provider value={firstState}>
+    <h1>First Context : {firstState[0]} </h1>
+       <Sameer />
       <Suleman />
-    </GlassOneCTX>
+    </MyGlassContext.Provider>
+      
+    
     
 
-    <GlassTwoCTX>
-      <Shakeel />
-    </GlassTwoCTX>
+  
+  <MyGlassContextTwo.Provider value={secondState}>
+  <Shakeel />
+  </MyGlassContextTwo.Provider>
+     
+    
 
     </div>
   );
